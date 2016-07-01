@@ -1,7 +1,7 @@
 Getting-Start
 =============
 
-1. [database](/doc/database.md "database")
+1. [catalog](/readme.md "目录")
 
 
 

@@ -1,6 +1,14 @@
 l4mongoDB
 =========
 
+ . [overview](/readme.md)
+1. [getting-start](/doc/database.md "database") 
+2. [collection](/doc/collection.md "collection") 
+
+------------------------------------------
+
+##Overview
+
 MongoDB is a cross-platform, document oriented database that provides, high performance, high availability,
 and easy scalability. MongoDB works on concept of collection and document.
 
@@ -63,9 +71,9 @@ a comma separated key value pair.
 
 --------------------------------------------
       
-more info:
+
  
-1. [getting-start](doc/database.md "database") 
+
 
 
 
