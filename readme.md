@@ -22,14 +22,14 @@ documents may hold different types of data.
 
 Below given table shows the relationship of RDBMS terminology with MongoDB
 
-| RDBMS  | MongoDB |
-|---|
+|  RDBMS  |  MongoDB  |
+|---| ---|
 | Database | Database |
 | Table | Collection |
 | Tuple/Row | Document |
 | column | Field |
 | Table Join | Embedded Documents |
-| Table Join | Primary Key(Default key \_id provided by mongodb itself)|
+| Table Join | Primary Key(Default key \_id provided by mongodb itself) |
 
 ### Sample document
 Below given example shows the document structure of a blog site which is simply 
