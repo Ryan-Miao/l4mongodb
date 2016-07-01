@@ -1,14 +1,14 @@
 Getting-Start
 =============
 
-1. [database](doc/database.md "database")
+1. [database](/doc/database.md "database")
 
 
 
 -------------------------------
 ##Database
 
-check all the database:    
+check all the databases:    
 ```
 > show dbs
  local  0.000GB
