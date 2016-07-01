@@ -21,7 +21,9 @@ restaurants
 test
 ```
       
- Of course, there is other way to create a specify collection:    
+ Of course, there is other way to create a specify collection:     
+     
+     
     
 #### Syntax
 
@@ -39,7 +41,41 @@ Following is the list of options you can use:
 |---| ---| ---|
 |   capped | Boolean | (Optional) If true, enables a capped collection. Capped collection is  a collection fixed size collection that automatically overwrites its oldest entries  when it reaches its maximum size. **If you sepecify true, you need specify size parameter too** |
 | autoIndexID | Boolean | (Optional) If true, automatically create index  on  \_id filed. Default value is false |
-|size | number|(Optional) Specify a maximum size in bytes for a capped collection. ** If capped is true, then you need specify this filed also ** |
-|max|number| (Optional) Specifies the maximum number of documents allowed in the capped collection. | 
+|size | number|(Optional) Specify a maximum size in bytes for a capped collection.  **If capped is true, then you need specify this filed also** |
+|max|number| (Optional) Specifies the maximum number of documents allowed in the capped collection. |     
+
+while inserting the document , MongoDB first checks size filed of capped collection, then it checks max filed.
+    
+    
+   
+
+#### Example
+
+```
+> db.mycollection.drop()
+true
+> show collections
+restaurants
+test
+>
+>
+> db.createCollection("mycollection")
+{ "ok" : 1 }
+> show collections
+mycollection
+restaurants
+test
+>
+> db.createCollection("mycol",{capped:true,autoIndexID:true,size:6142800, max:10000})
+{ "ok" : 1 }
+> show collections
+mycol
+mycollection
+restaurants
+test
+>
+```
+
+next : http://www.tutorialspoint.com/mongodb/mongodb_drop_collection.htm
 
 
