@@ -23,7 +23,7 @@ documents may hold different types of data.
 Below given table shows the relationship of RDBMS terminology with MongoDB
 
 |  RDBMS  |  MongoDB  |
-|---| ---|
+|---| --- |
 | Database | Database |
 | Table | Collection |
 | Tuple/Row | Document |
@@ -61,7 +61,10 @@ a comma separated key value pair.
 }
 ```
 
+--------------------------------------------
 
+more info:
+1. [getting-start](doc/database.md "database") 
 
 
 
