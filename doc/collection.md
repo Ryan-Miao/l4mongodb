@@ -8,7 +8,7 @@ collection
 ### create collection
 
 
-when you insert data, if the collection mot exists, it will be created automatically:     
+when you insert data, if the collection not exists, it will be created automatically:     
 ```
 > show collections
 restaurants
@@ -75,6 +75,37 @@ restaurants
 test
 >
 ```
+
+
+
+    
+###drop()
+```
+> use test
+switched to db test
+> show collections
+mycol
+mycollection
+restaurants
+test
+> db.mycol.drop()
+true
+> show collections
+mycollection
+restaurants
+test
+```
+
+
+
+
+
+
+
+
+
+
+
 
 next : http://www.tutorialspoint.com/mongodb/mongodb_drop_collection.htm
 
