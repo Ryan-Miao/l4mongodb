@@ -4,6 +4,7 @@ l4mongoDB
 0. [overview](/readme.md)    
 1.  [getting-start](/doc/database.md "database")    
 2.  [collection](/doc/collection.md "collection")    
+3.  [dataType](/doc/dataType.md "collection")    
  
 
 ------------------------------------------
