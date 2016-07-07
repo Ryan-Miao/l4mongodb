@@ -254,7 +254,58 @@ Basic syntax of **OR** is shown below −
 
 
 
+###Using AND and  OR together
+ 
+ 
+ ####Example
+ Below given example will show the documents that have likes greater than 10
+ and whose title is either 'MongoDB Overview' or by is 'tutorials point': 
+Equals:`where likes>10 AND (by = 'tutorials point' OR title = 'MongoDB Overview')` 
+```
+> db.mycol.find({
+                        "likes": {$gt:10}, 
+                        $or: [
+                            {"by": "tutorials point"}, {"title": "MongoDB Overview"}
+                        ]
+}).pretty()
+{
+        "_id" : ObjectId("577e19c5502847799b05f064"),
+        "title" : "MongoDB Overview",
+        "description" : "MongoDB is no sql database",
+        "by" : "tutorials point",
+        "url" : "http://www.tutorialspoint.com",
+        "tags" : [
+                "mongodb",
+                "database",
+                "NoSQL"
+        ],
+        "likes" : 100
+}
+{
+        "_id" : ObjectId("577e19c5502847799b05f065"),
+        "title" : "NoSQL Database",
+        "description" : "NoSQL database doesn't have tables",
+        "by" : "tutorials point",
+        "url" : "http://www.tutorialspoint.com",
+        "tags" : [
+                "mongodb",
+                "database",
+                "NoSQL"
+        ],
+        "likes" : 20,
+        "comments" : [
+                {
+                        "user" : "user1",
+                        "message" : "My first comment",
+                        "dateCreated" : ISODate("2013-12-10T10:35:00Z"),
+                        "like" : 0
+                }
+        ]
+}
+```
 
+
+next:http://www.tutorialspoint.com/mongodb/mongodb_update_document.htm
 
 
 
