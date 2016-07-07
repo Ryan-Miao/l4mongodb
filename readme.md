@@ -1,10 +1,12 @@
 l4mongoDB
 =========
 
-0. [overview](/readme.md)    
+0.  [overview](/readme.md)    
 1.  [getting-start](/doc/database.md "database")    
 2.  [collection](/doc/collection.md "collection")    
-3.  [dataType](/doc/dataType.md "collection")    
+3.  [dataType](/doc/dataType.md "dataType")    
+4.  [insert](/doc/insert.md "insert")  
+5.  [find](/doc/find.md "find")  
  
 
 ------------------------------------------

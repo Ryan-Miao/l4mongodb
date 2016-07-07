@@ -107,6 +107,6 @@ test
 
 
 
-next : http://www.tutorialspoint.com/mongodb/mongodb_drop_collection.htm
+next : [dataType](/doc/dataType.md "dataType")  
 
 

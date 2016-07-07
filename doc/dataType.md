@@ -34,3 +34,5 @@ MongoDB supports many datatypes whose list is given below:
 **Code** : This datatype is used to store javascript code into document.
 
 **Regular expression** : This datatype is used to store regular expression
+
+next:[insert](/doc/insert.md "insert")  
