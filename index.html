@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="L4mongodb : test mongodb">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>L4mongodb</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/chenxing12/l4mongodb">View on GitHub</a>
+
+          <h1 id="project_title">L4mongodb</h1>
+          <h2 id="project_tagline">test mongodb</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/chenxing12/l4mongodb/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/chenxing12/l4mongodb/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="l4mongodb" class="anchor" href="#l4mongodb" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>l4mongoDB</h1>
+
+<ol>
+<li> <a href="/readme.md">overview</a><br>
+</li>
+<li> <a href="/doc/database.md" title="database">getting-start</a><br>
+</li>
+<li> <a href="/doc/collection.md" title="collection">collection</a><br>
+</li>
+<li> <a href="/doc/dataType.md" title="dataType">dataType</a><br>
+</li>
+<li> <a href="/doc/insert.md" title="insert">insert</a><br>
+</li>
+<li> <a href="/doc/find.md" title="find">find</a><br>
+</li>
+</ol>
+
+<hr>
+
+<h2>
+<a id="overview" class="anchor" href="#overview" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Overview</h2>
+
+<p>MongoDB is a cross-platform, document oriented database that provides, high performance, high availability,
+and easy scalability. MongoDB works on concept of collection and document.</p>
+
+<h3>
+<a id="database" class="anchor" href="#database" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Database</h3>
+
+<p>Database is a physical container for collections. Each database gets its own set
+of files on the file system. A single MongoDB server typically has multiple databases.</p>
+
+<h3>
+<a id="collection" class="anchor" href="#collection" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Collection</h3>
+
+<p>Collection is a group of MongoDB documents. It is the equivalent of an RDBMS table.
+A collection exists within a single database. Collections do not enforce a schema.
+Documents with a collection can have different fields. Typically, all documents 
+in a collection are of similar or related purpose.</p>
+
+<h3>
+<a id="document" class="anchor" href="#document" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Document</h3>
+
+<p>A document is a set of key-value pairs. Documents have dynamic schema.
+Dynamic schema means that documents in the same collection do not need to 
+have the same set of fields or structure, and common fields in a collection's
+documents may hold different types of data.</p>
+
+<p>Below given table shows the relationship of RDBMS terminology with MongoDB</p>
+
+<table>
+<thead>
+<tr>
+<th>RDBMS</th>
+<th>MongoDB</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Database</td>
+<td>Database</td>
+</tr>
+<tr>
+<td>Table</td>
+<td>Collection</td>
+</tr>
+<tr>
+<td>Tuple/Row</td>
+<td>Document</td>
+</tr>
+<tr>
+<td>column</td>
+<td>Field</td>
+</tr>
+<tr>
+<td>Table Join</td>
+<td>Embedded Documents</td>
+</tr>
+<tr>
+<td>Table Join</td>
+<td>Primary Key(Default key _id provided by mongodb itself)</td>
+</tr>
+</tbody>
+</table>
+
+<h3>
+<a id="sample-document" class="anchor" href="#sample-document" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Sample document</h3>
+
+<p>Below given example shows the document structure of a blog site which is simply 
+a comma separated key value pair.</p>
+
+<pre><code>{
+   _id: ObjectId(7df78ad8902c)
+   title: 'MongoDB Overview', 
+   description: 'MongoDB is no sql database',
+   by: 'tutorials point',
+   url: 'http://www.tutorialspoint.com',
+   tags: ['mongodb', 'database', 'NoSQL'],
+   likes: 100, 
+   comments: [  
+      {
+         user:'user1',
+         message: 'My first comment',
+         dateCreated: new Date(2011,1,20,2,15),
+         like: 0 
+      },
+      {
+         user:'user2',
+         message: 'My second comments',
+         dateCreated: new Date(2011,1,25,7,45),
+         like: 5
+      }
+   ]
+}
+</code></pre>
+
+<hr>
+
+<p>next:  <a href="/doc/database.md" title="database">getting-start</a>   </p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">L4mongodb maintained by <a href="https://github.com/chenxing12">chenxing12</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
