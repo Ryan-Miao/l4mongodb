@@ -28,10 +28,13 @@ public class QuickTour {
 
     @Test
     public void testDate(){
+        TimeZone timeZone = TimeZone.getDefault();
+        System.out.println(timeZone);
         Date a = new Date();
-        System.out.println(a);
-//        TimeZone.setDefault(TimeZone.getTimeZone("UTC"));
-        System.out.println(TimeZone.getDefault());
+        System.out.println("default:  "+a);
+        TimeZone.setDefault(TimeZone.getTimeZone("UTC"));
+        System.out.println("UTC:   "+a);
+        TimeZone.setDefault(timeZone);
         Employee one = new Employee("a",a);
         Key<Employee> save = datastore.save(one);
         Object id = save.getId();
